@@ -1,3 +1,5 @@
 steps:
   - name: 'ubuntu'
     args: ['echo', 'hello commit $COMMIT_SHA']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo', '.']
