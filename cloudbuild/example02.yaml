@@ -1,0 +1,9 @@
+steps:
+  - name: 'ubuntu'
+    args:
+      - bash
+      - -c
+      - |
+        ls
+        pwd
+        echo "Hello, world!"
