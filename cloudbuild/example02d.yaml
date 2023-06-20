@@ -1,0 +1,16 @@
+steps:
+  - name: 'ubuntu'
+    args:
+    - bash
+    - -c
+    - |
+      echo 'inside a file!' > /example/test.txt
+    volumes:
+      - name: "example"
+        path: /example
+  - name: 'ubuntu'
+    args: ['cat', '/example/test.txt']
+    volumes:
+      - name: "example"
+        path: /example
+
