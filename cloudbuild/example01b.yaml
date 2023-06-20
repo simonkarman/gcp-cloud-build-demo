@@ -1,0 +1,7 @@
+steps:
+  - name: 'ubuntu'
+    args: ['ls']
+  - name: 'ubuntu'
+    args: ['pwd']
+  - name: 'ubuntu'
+    args: ['echo', 'hello, world!']
