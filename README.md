@@ -42,5 +42,10 @@ git push
 ```bash
 # start docker engine
 # gcloud auth configure-docker europe-west4-docker.pkg.dev
-docker pull europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo
+docker run europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo/server
+```
+
+## Additional Example Custom Build Commands
+```bash
+gcloud builds submit --config cloudbuild/example02.yaml .
 ```

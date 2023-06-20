@@ -6,6 +6,6 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['test']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo:latest', '.']
+    args: ['build', '-t', 'europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo/server:latest', '.']
 images:
-  - 'europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo:latest'
+  - 'europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo/server:latest'
