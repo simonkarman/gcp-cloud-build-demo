@@ -1,6 +1,14 @@
 # GCP Cloud Build Demo
 Demo of using Cloud Build to build a Docker image for a NodeJS application
 
+Resources:
+- [Cloud Build (global)](https://console.cloud.google.com/cloud-build/builds;region=global)
+- [Cloud Build (region)](https://console.cloud.google.com/cloud-build/builds;region=europe-west4)
+- [Artifact Registry](https://console.cloud.google.com/artifacts/docker/simon-karman-cloud-build-demo/europe-west4/gcp-cloud-build-demo)
+- [IAM](https://console.cloud.google.com/iam-admin/iam)
+- [Secrets Manager](https://console.cloud.google.com/security/secret-manager?referrer=search&project=simon-karman-cloud-build-demo)
+- `384372164632@cloudbuild.gserviceaccount.com`
+
 ## Example Custom Build Commands
 ```bash
 gcloud builds submit --config cloudbuild/example01a.yaml .
@@ -45,7 +53,17 @@ git push
 docker run europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo/server
 ```
 
-## Additional Example Custom Build Commands
-```bash
-gcloud builds submit --config cloudbuild/example02.yaml .
-```
+## Additional Examples
+- [Using Secrets](https://cloud.google.com/build/docs/securing-builds/use-secrets) from [Secrets Manager](https://console.cloud.google.com/security/secret-manager)
+    ```bash
+    gcloud builds submit --config cloudbuild/example02a.yaml .
+    ```
+- Using custom [Service Account](https://console.cloud.google.com/iam-admin/serviceaccounts)
+    ```bash
+    gcloud builds submit --config cloudbuild/example02b.yaml .
+    ```
+- Self-published image as step
+    ```bash
+    gcloud builds submit --config cloudbuild/example02c.yaml .
+    ```
+- [Speeding up builds](https://cloud.google.com/build/docs/optimize-builds/speeding-up-builds)

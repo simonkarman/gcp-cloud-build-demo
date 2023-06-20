@@ -1,0 +1,3 @@
+steps:
+  - name: 'europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo/server'
+    dir: /usr/src/app
