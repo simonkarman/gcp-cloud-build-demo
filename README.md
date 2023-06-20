@@ -17,3 +17,30 @@ gcloud builds submit --config cloudbuild/example01d.yaml .
 ```bash
 gcloud builds submit --config cloudbuild/example01e.yaml --substitutions=_HELLO="world" .
 ```
+
+## Example Running Locally
+```bash
+npm run dev
+```
+```bash
+npm run lint
+```
+```bash
+npm run test
+```
+```bash
+npm run build
+```
+```bash
+npm run start
+```
+```bash
+# after change to src/index.ts
+git commit -m "Updated server response"
+git push
+```
+```bash
+# start docker engine
+# gcloud auth configure-docker europe-west4-docker.pkg.dev
+docker pull europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-build-demo
+```
