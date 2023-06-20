@@ -1,0 +1,19 @@
+steps:
+  - name: 'ubuntu'
+    id: 'setup'
+    args: ['echo', 'setup!']
+  - name: 'ubuntu'
+    waitFor: ['setup']
+    args: ['sleep', '5']
+  - name: 'ubuntu'
+    waitFor: ['setup']
+    args: ['sleep', '5']
+  - name: 'ubuntu'
+    waitFor: ['setup']
+    args: ['sleep', '5']
+  - name: 'ubuntu'
+    waitFor: ['setup']
+    args: ['sleep', '5']
+  - name: 'ubuntu'
+    id: 'after'
+    args: ['echo', 'after!']

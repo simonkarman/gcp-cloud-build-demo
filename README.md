@@ -70,3 +70,7 @@ docker run europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-b
     ```bash
     gcloud builds submit --config cloudbuild/example02d.yaml .
     ```
+- Parallelism and Dependencies
+    ```bash
+    gcloud builds submit --config cloudbuild/example02e.yaml .
+    ```
