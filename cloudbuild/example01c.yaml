@@ -4,6 +4,6 @@ steps:
       - bash
       - -c
       - |
-        ls
-        pwd
-        echo "Hello, world!"
+        echo "welcome 1"
+        echo "bonjour 2"
+        echo "hallo 3"

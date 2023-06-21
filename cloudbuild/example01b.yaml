@@ -1,7 +1,7 @@
 steps:
   - name: 'ubuntu'
-    args: ['ls']
+    args: ['echo', 'welcome 1']
   - name: 'ubuntu'
-    args: ['pwd']
+    args: ['echo', 'bonjour 2']
   - name: 'ubuntu'
-    args: ['echo', 'hello, world!']
+    args: ['echo', 'hallo 3']

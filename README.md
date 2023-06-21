@@ -9,7 +9,7 @@ Resources:
 - [Secrets Manager](https://console.cloud.google.com/security/secret-manager?referrer=search&project=simon-karman-cloud-build-demo)
 - `384372164632@cloudbuild.gserviceaccount.com`
 
-## Example Custom Build Commands
+## Execution Examples
 ```bash
 gcloud builds submit --config cloudbuild/example01a.yaml .
 ```
@@ -25,8 +25,19 @@ gcloud builds submit --config cloudbuild/example01d.yaml .
 ```bash
 gcloud builds submit --config cloudbuild/example01e.yaml --substitutions=_HELLO="world" .
 ```
+```bash
+gcloud builds submit --config cloudbuild/example01f.yaml .
+```
 
-## Example Running Locally
+## Sources Examples
+```bash
+gcloud builds submit --config cloudbuild/example02a.yaml .
+```
+```bash
+gcloud builds submit --config cloudbuild/example02b.yaml .
+```
+
+## Artifacts Example
 ```bash
 npm run dev
 ```
@@ -56,21 +67,13 @@ docker run europe-west4-docker.pkg.dev/simon-karman-cloud-build-demo/gcp-cloud-b
 ## Additional Examples
 - [Using Secrets](https://cloud.google.com/build/docs/securing-builds/use-secrets) from [Secrets Manager](https://console.cloud.google.com/security/secret-manager)
     ```bash
-    gcloud builds submit --config cloudbuild/example02a.yaml .
+    gcloud builds submit --config cloudbuild/example03a.yaml .
     ```
 - Using custom [Service Account](https://console.cloud.google.com/iam-admin/serviceaccounts)
     ```bash
-    gcloud builds submit --config cloudbuild/example02b.yaml .
+    gcloud builds submit --config cloudbuild/example03b.yaml .
     ```
 - Self-published image as step
     ```bash
-    gcloud builds submit --config cloudbuild/example02c.yaml .
-    ```
-- Using Volumes
-    ```bash
-    gcloud builds submit --config cloudbuild/example02d.yaml .
-    ```
-- Parallelism and Dependencies
-    ```bash
-    gcloud builds submit --config cloudbuild/example02e.yaml .
+    gcloud builds submit --config cloudbuild/example03c.yaml .
     ```
