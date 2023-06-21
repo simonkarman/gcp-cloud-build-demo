@@ -14,4 +14,3 @@ steps:
     volumes:
       - name: "example"
         path: /example
-
